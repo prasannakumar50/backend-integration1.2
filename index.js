@@ -180,7 +180,7 @@ async function hotelById(hotelId){
 app.delete("/hotels/:hotelId", async(req, res)=>{
   try{
      const deletedHotel = await hotelById(req.params.hotelId)
-     res.status(400).json({message: 'Hotel deleted successfully'})
+     res.status(200).json({message: 'Hotel deleted successfully'})
   }catch(error){
     res.status(500).json({error: 'Failed to delete Hotel'})
   }
